@@ -108,7 +108,6 @@ public class NetworkConnection {
             SharedPreferences.Editor editor = sharedPreference.edit();
             editor.putString(STICKINESS_COOKIE,splitCookie[0]);
             editor.commit();
-            Log.d("Stickiness Cookie",splitCookie[0]);
         }
     }
 

@@ -40,6 +40,6 @@
         android:id="@+id/instrument_list"
         android:background="#f8f8f8"
         android:divider="@null"
-        android:layout_marginBottom="20dp"
+        android:paddingBottom="20dp"
         ></ListView>
 </android.support.constraint.ConstraintLayout>

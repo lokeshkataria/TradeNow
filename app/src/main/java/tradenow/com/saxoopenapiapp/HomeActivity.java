@@ -63,7 +63,6 @@ public class HomeActivity extends AppCompatActivity {
                 NetworkConnection.getInstance(getApplicationContext()).sendStringRequest(Request.Method.POST, gCtx.getAccessTokenURL(), gCtx.getAccessTokenParams(),gCtx.getAccessTokenHeaders(), new NetworkResponseHandler() {
                     @Override
                     public void onSuccess(String response) {
-                        Log.d("accessTokenResponse",response);
                         gCtx.saveTokenResponse(response);
                         getInstrumentList();
                     }
