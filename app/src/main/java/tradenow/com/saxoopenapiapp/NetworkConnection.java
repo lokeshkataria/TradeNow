@@ -117,6 +117,7 @@ public class NetworkConnection {
         String SET_COOKIE_KEY = mCtx.getResources().getString(R.string.SET_COOKIE_KEY);
         String COOKIE_INITIALS = mCtx.getResources().getString(R.string.COOKIE_INITIALS);
         String STICKINESS_COOKIE = mCtx.getResources().getString(R.string.STICKINESS_COOKIE);
+        String COOKIE = mCtx.getResources().getString(R.string.COOKIE);
 
         SharedPreferences sharedPreference = GlobalContext.getInstance(mCtx).getPreference();
         String stickiness = sharedPreference.getString(STICKINESS_COOKIE,"");
@@ -124,12 +125,12 @@ public class NetworkConnection {
         if(stickiness.length() > 0){
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(stickiness);
-            if(headers.containsKey("Cookie"))
+            if(headers.containsKey(COOKIE))
             {
                 stringBuilder.append("; ");
-                stringBuilder.append(headers.get("Cookie"));
+                stringBuilder.append(headers.get(COOKIE));
             }
-            headers.put("Cookie",stringBuilder.toString());
+            headers.put(COOKIE,stringBuilder.toString());
         }
     }
 

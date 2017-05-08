@@ -10,10 +10,7 @@
     <string name="InstrumentListUrl">/ref/v1/instruments/</string>
     <string name="BatchRequestUrl">/ref/batch</string>
     <string name="InstrumentDetailUrl">/ref/v1/instruments/details/</string>
-
-    <string name="SET_COOKIE_KEY">Set-Cookie</string>
-    <string name="COOKIE_INITIALS">oa</string>
-    <string name="STICKINESS_COOKIE">stickiness</string>
+    <string name="InfoPriceListUrl">/trade/v1/infoprices/list/</string>
 
 </resources>
 

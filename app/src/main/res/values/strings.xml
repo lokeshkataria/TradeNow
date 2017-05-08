@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TradeNow</string>
+
+    <string name="SET_COOKIE_KEY">Set-Cookie</string>
+    <string name="COOKIE_INITIALS">oa</string>
+    <string name="STICKINESS_COOKIE">stickiness</string>
+    <string name="COOKIE">Cookie</string>
 </resources>

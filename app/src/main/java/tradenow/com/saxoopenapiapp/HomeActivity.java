@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private String tokenType;
     private FxSpotInstrument[] fxSpotInstrument;
     private String[] uics;
-    private final int TWO_SECONDS = 2000;
+    private final int THREE_SECONDS = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,9 +119,9 @@ public class HomeActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 getInstrumentsPrice();         // this method will contain your almost-finished HTTP calls
-                handler.postDelayed(this, 5000);
+                handler.postDelayed(this, THREE_SECONDS);
             }
-        }, 5000);
+        }, THREE_SECONDS);
 
     }
 
@@ -138,7 +138,7 @@ public class HomeActivity extends AppCompatActivity {
                 strBuilder.append(fxSpotInstrument[i].getIdentifier());
         }
         String uic = strBuilder.toString();
-        String infoPricesUrl = getResources().getString(R.string.OpenApiBaseUrl)+"/trade/v1/infoprices/list/"+"?AssetType=FxSpot&Uics="+uic;
+        String infoPricesUrl = getResources().getString(R.string.OpenApiBaseUrl)+getResources().getString(R.string.InfoPriceListUrl)+"?AssetType=FxSpot&Uics="+uic;
 
         NetworkConnection.getInstance(getApplicationContext()).sendStringRequest(Request.Method.GET, infoPricesUrl, null,accessTokenHeaders, new NetworkResponseHandler() {
             @Override
@@ -152,7 +152,7 @@ public class HomeActivity extends AppCompatActivity {
                         JSONObject quote = instrument.getJSONObject("Quote");
                         fxSpotInstrument[count].setPrice(quote.getString("Mid"));
                     }
-                    Log.d("prices",response.toString());
+
                     displayFxSpotInstruments();
                 } catch(Exception e) {
                     Log.e("JSON Parse",e.getMessage());
