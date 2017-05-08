@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="AppUrl">https://logonvalidation.net/sim/saxoopenapichallenge</string>
+    <string name="AppKey">123d4a3ab83c4de1bafc33724c8d8750</string>
+    <string name="AppSecret">983247912b8e4821ae93136b86072897</string>
+    <string name="AuthenticationUrl">https://sim.logonvalidation.net</string>
+    <string name="OpenApiBaseUrl">https://gateway.saxobank.com/sim/openapi</string>
+    <string name="PartnerIdpUrl">https://sim.logonvalidation.net</string>
+
+    <string name="InstrumentListUrl">/ref/v1/instruments/</string>
+    <string name="BatchRequestUrl">/ref/batch</string>
+    <string name="InstrumentDetailUrl">/ref/v1/instruments/details/</string>
+
+    <string name="SET_COOKIE_KEY">Set-Cookie</string>
+    <string name="COOKIE_INITIALS">oa</string>
+    <string name="STICKINESS_COOKIE">stickiness</string>
+
+</resources>
+
